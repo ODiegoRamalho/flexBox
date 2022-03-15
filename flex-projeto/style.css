@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    text-decoration: none;
+    
+}
+
+ul li a:hover {
+    text-decoration:underline;
+    color: burlywood;
+    
+}
+
+div img {  /* Responcividade  img */
+    display: block;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    max-width: 992px;
+    margin: auto; /* 2 */
+    width: 100%;
+    min-width: 320px;
+}
+
+header {
+    background-color: #122a57;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+header .list-items {
+    display: flex;
+    max-width: 260px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; /*Centralizar os links*/
+
+}
+
+.list-items li a {
+    color: #ffffff;
+}
+
+header .menu { /* 1 */
+    justify-content: space-between;
+}
+
+.apresentacao {
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao .texto-apresentacao {
+    min-height: 200px;
+}
+
+.apresentacao .texto-apresentacao h1 {
+    color: #122a57;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #122a57;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 30px;
+    width: 220px;
+    display: block; /* para o width funcionar*/
+    text-decoration: none;
+    height: 50px;
+    line-height: 50px; /* para centralizar o nome*/
+    margin-top: 10px; /* para centralizar o nome*/
+    margin-bottom: 10px; /* para centralizar o nome*/
+}
+
+/* quem-somos */
+
+#quem-somos { /* 2 */
+    flex-direction: row-reverse; /* altera a ordem txt e img */
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#quem-somos h2 {
+    font-size: 32px;
+    color: #122a57;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#quem-somos  h2::before { /* 3 */
+    content: "";
+    height: 50px;
+    width: 5px;
+    margin-right: 5px;
+    background-color: #122a57;
+    position: relative;
+}
+
+#quem-somos p {
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+#quem-somos img {
+    min-width: 420px;
+}
+
+/* Serviços */
+
+.conteiner-externo {
+    background-color: #122a57;
+    width:100%;
+}
+
+#servicos {
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+#servicos h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.list-servicos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-servicos .item-servico {
+    text-align: center;
+}
+
+.item-servico a{
+    width: 220px;
+    background-color: #fff;
+    border-radius: 30px;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 50px;
+    padding: 5px 10px;
+    color: #122a57;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.item-servico p {
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.item-servico img {
+    width: 80%;
+    margin: auto;
+}
+
+/*Planos*/
+
+#planos {
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+#planos h2 {
+    font-size: 32px;
+}
+
+.list-planos{ /* 4 */
+    display: flex;
+    align-items: flex-end; /* alinhar pela linha de baixo */
+    justify-content: space-between;
+}
+
+.item-plano {
+    flex: 1;
+    border: 5px solid #122a57;
+    margin-right: 20px;
+    padding: 10px;
+    max-width: 240px;
+}
+
+.item-plano .btn {
+    margin: auto;  /* alinhar centro */
+    margin-bottom: 20px;
+}
+
+.item-plano h3 {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.item-plano h3::after{  /* linha divisoria */
+    content: "";
+    background-color: #122a57;
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.item-plano ul {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.item-plano ul li {
+    display: flex;
+    flex-wrap: nowrap;/* elemento ñ quebra linha */
+    align-items: center;
+    
+}
+
+.item-plano ul li ::before { /*marcadores*/
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #122a57;
+    margin-right: 5px;
+
+}
+
+/*footer*/
+
+footer {
+    background-color: #122a57;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer {
+    justify-content: space-between;
+    color: #fff;
+}
+
+/*mobile*/
+
+@media(max-width:992px){
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao .texto-apresentacao {
+        width: 100%;
+    }
+
+    #quem-somos {
+        flex-direction: column-reverse;
+    }
+
+    #quem-somos img {
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .list-servicos {
+        flex-direction: column;
+    }
+
+    .item-servico img {
+        width: 50%;
+        margin: auto;
+    }
+
+    .list-planos {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .list-planos .item-plano {
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+}
+
+/*
+div img { //responsividade
+    display: block;
+    width: 100%;
+}
+
+1
+header .menu {  // Propriedade do flex / itens a direita
+    justify-content: space-between;
+}
+
+2
+#quem-somos {
+    flex-direction: row-reverse;
+    // neste caso inverte a ordem do texto e imagem
+}
+
+3
+#quem-somos  h2::before { // pseudo elemento
+    content: "";
+    height: 50px;
+    width: 5px;
+    margin-right: 5px;
+    background-color: #122a57;
+    position: relative;
+}
+
+4
+.list-planos{ /alinhar pela linha de baixo/
+    display: flex;
+    align-items: flex-end;
+}
+
+margin: auto // centraliza
+
+*/
